@@ -7,4 +7,4 @@ RUN apk add --update nodejs-lts && \
 RUN npm install -g mountebank@${MOUNTEBANK_VERSION} --production
 
 ENTRYPOINT ["mb"]
-CMD ["start --port $PORT --host mb-docker.herokuapp.com"]
+CMD ["start", "--port $PORT", "--host mb-docker.herokuapp.com"]
