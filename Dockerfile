@@ -1,9 +1,3 @@
-FROM alpine:3.14
+FROM bbyars/mountebank:2.5.0
 
-ENV MOUNTEBANK_VERSION=2.4.0
-
-RUN apk add --update nodejs-lts && \
-    apk add --update npm
-RUN npm install -g mountebank@${MOUNTEBANK_VERSION} --production
-
-ENTRYPOINT mb start --port $PORT --host mb-docker.herokuapp.com
+ENTRYPOINT mb start
