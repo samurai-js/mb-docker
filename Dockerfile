@@ -1,3 +1,2 @@
 FROM bbyars/mountebank:latest
-ENTRYPOINT ["mb"]
-CMD ["start"]
+CMD mb start "--port '\$PORT' --host mb-docker.herokuapp.com" 
